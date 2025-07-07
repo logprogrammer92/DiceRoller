@@ -25,7 +25,7 @@ public class Die
     /// with a specified number of sides.
     /// </summary>
     /// <param name="numSides">
-    /// The number of sides for the die. Must be greater than zero.
+    /// The number of sides for the die. Must be greater than zero and up to <see cref="MAX_SIDES"/>.
     /// </param>
     /// <exception cref="ArgumentOutOfRangeException">Thrown when invalid number of sides is provided</exception>
     public Die(byte numSides)
