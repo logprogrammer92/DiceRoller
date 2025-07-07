@@ -17,6 +17,8 @@ namespace DiceRoller;
 
 public class Die
 {
+    private static readonly Random rand = new();
+
     /// <summary>
     /// Initializes a new instance of the <see cref="Die"/> class 
     /// with a specified number of sides.
@@ -53,7 +55,6 @@ public class Die
     /// of sides of the die, inclusive.</returns>
     public byte Roll()
     {
-        Random rand = new();
         FaceUpValue = Convert.ToByte(rand.Next(1, NumberOfSides + 1));
 
         return FaceUpValue;
