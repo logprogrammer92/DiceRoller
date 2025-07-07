@@ -38,4 +38,24 @@ public class Die
     /// Gets the number of sides of the die.
     /// </summary>
     public byte NumberOfSides { get; private set; }
+
+    /// <summary>
+    /// The current face up value for the die.
+    /// </summary>
+    public byte FaceUpValue { get; private set; }
+
+    /// <summary>
+    /// Simulates rolling the die and returns the resulting face-up value.
+    /// </summary>
+    /// <remarks>The face-up value is randomly determined based on the number of sides of the die. The value
+    /// is updated internally and can be retrieved using the <see cref="FaceUpValue"/> property.</remarks>
+    /// <returns>A byte representing the face-up value of the die after the roll. the value will be between 1 and the number
+    /// of sides of the die, inclusive.</returns>
+    public byte Roll()
+    {
+        Random rand = new();
+        FaceUpValue = Convert.ToByte(rand.Next(1, NumberOfSides + 1));
+
+        return FaceUpValue;
+    }
 }
