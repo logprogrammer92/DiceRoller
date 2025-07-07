@@ -35,6 +35,9 @@ public class Die
                 , $"{nameof(numSides)} must be greater than 0 and less than 21");
         }
         NumberOfSides = numSides;
+
+        // Forces the die to start as a random number
+        Roll();
     }
     /// <summary>
     /// Gets the number of sides of the die.
