@@ -43,7 +43,7 @@ public class Die
     /// <summary>
     /// Gets the number of sides of the die.
     /// </summary>
-    public byte NumberOfSides { get; private set; }
+    public byte NumberOfSides { get; init; }
 
     /// <summary>
     /// The current face up value for the die.
