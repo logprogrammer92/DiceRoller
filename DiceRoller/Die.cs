@@ -24,6 +24,7 @@ public class Die
     /// <param name="numSides">
     /// The number of sides for the die. Must be greater than zero.
     /// </param>
+    /// <exception cref="ArgumentOutOfRangeException">Thrown when invalid number of sides is provided</exception>
     public Die(byte numSides)
     {
         if (numSides <= 0 || numSides > 20)
